@@ -1,0 +1,9 @@
+---
+- name: Debian
+  when: ansible_os_family == 'Debian'
+  apt: name=mosh state=latest
+
+- name: Fedora
+  when: ansible_os_family == 'Fedora'
+  yum: name=mosh state=latest
+  
