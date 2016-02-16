@@ -1,4 +1,4 @@
 ---
-- name: Debian
+- name: pkg install..
   package: name=mosh state=present
   
