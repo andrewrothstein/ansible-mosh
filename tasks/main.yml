@@ -1,4 +1,7 @@
 ---
 - name: pkg install..
-  package: name=mosh state=present
-  
+  become: true
+  become_user: root
+  package:
+    name: '{{ mosh_os_pkgs | default(["mosh"]) }}'
+    state: present
