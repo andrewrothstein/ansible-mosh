@@ -32,7 +32,3 @@ galaxy_info:
   galaxy_tags:
     - development
   role_name: mosh
-
-dependencies:
-  - role: andrewrothstein.epel
-    version: v1.1.3
