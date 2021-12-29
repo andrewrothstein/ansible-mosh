@@ -1,4 +1,4 @@
 ---
 roles:
-  - role: andrewrothstein.epel
+  - name: andrewrothstein.epel
     version: v1.1.3
