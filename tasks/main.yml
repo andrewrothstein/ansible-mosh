@@ -1,9 +1,9 @@
 ---
-- include_role:
+- ansible.builtin.include_role:
     name: andrewrothstein.epel
-- name: pkg install..
+- name: os pkg install..
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ mosh_os_pkgs | default(["mosh"]) }}'
     state: present
