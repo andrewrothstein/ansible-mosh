@@ -1,0 +1,4 @@
+---
+mosh_os_pkgs:
+  - perl
+  - mosh
