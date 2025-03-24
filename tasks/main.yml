@@ -1,7 +1,8 @@
 ---
-- ansible.builtin.include_role:
+- name: Installing andrewrothstein.epel
+  ansible.builtin.include_role:
     name: andrewrothstein.epel
-- name: os pkg install..
+- name: OS pkg install..
   become: true
   become_user: root
   ansible.builtin.package:

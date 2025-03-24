@@ -1,4 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.mosh
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
+  tasks:
+    - name: Executing 'mosh --version'
+      ansible.builtin.command: mosh --version
+      changed_when: false
+      register: mosh_test_output
+    - name: Output from 'mosh --version'
+      ansible.builtin.debug:
+        msg: '{{ mosh_test_output.stdout }}'
